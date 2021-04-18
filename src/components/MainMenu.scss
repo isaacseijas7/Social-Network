@@ -1,0 +1,177 @@
+.nav {
+    background: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    width: 100%;
+
+    .contenedor-nav {
+        max-width: 975px;
+        width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px auto;
+        .grid-nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            width: 100%;
+            .logo {
+                a {
+                    padding: 17px 25px 17px 0;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+            }
+            .searcher {
+                flex: 0 1 auto;
+                min-width: 125px;
+                width: 215px;
+                height: 28px;
+                margin: auto;
+                position: relative;
+                input {
+                    line-height: 18px;
+                    width: 100%;
+                    font-size: 16px;
+                    background: #fafafa;
+                    border: solid 1px #dbdbdb;
+                    border-radius: 3px;
+                    color: #262626;
+                    outline: 0;
+                    padding: 3px 10px 3px 26px;
+                    z-index: 2;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100%;
+                }
+                .wrapper-finder-controller {
+                    background: #fafafa;
+                    border: solid 1px #dbdbdb;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    border-radius: 3px;
+                    color: #8e8e8e;
+                    cursor: text;
+                    font-size: 14px;
+                    font-weight: 300;
+                    left: 0;
+                    padding: 5px;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    z-index: 2;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100%;
+                    .finder-controller {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                    }
+                }
+                .search-icon-core {
+                    left: 7px;
+                    position: absolute;
+                    top: 7px;
+                    z-index: 2;
+                }
+                .search-icon-close {
+                    position: absolute;
+                    right: 7px;
+                    top: 7px;
+                    z-index: 3;
+                    cursor: pointer;
+                }
+                .wrapper-dropdown {
+                    top: 12px;
+                    right: 40%;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    .dropdown {
+                        flex-shrink: 0;
+                        transform-origin: top center;
+                        background: #fff;
+                        border-radius: 6px;
+                        box-shadow: 0 0 5px 1px #00000019;
+                        position: absolute;
+                        z-index: 3;
+                        .dropdown-arrow {
+                            left: 187.5px;
+                            bottom: 0;
+                            top: -6px;
+                            background: #fff;
+                            border: 1px solid #fff;
+                            bottom: -6px;
+                            box-shadow: 0 0 5px 1px #00000019;
+                            height: 14px;
+                            position: absolute;
+                            transform: rotate(45deg);
+                            width: 14px;
+                        }
+                        .dropdown-card {
+                            background: #fff;
+                            border-radius: 6px;
+                            height: 100%;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            flex-shrink: 0;
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                            align-items: stretch;
+                            .dropdown-card-wrapper {
+                                height: 362px;
+                                overflow-x: hidden;
+                                overflow-y: auto;
+                                padding: 12px 0 0 0;
+                                width: 375px;
+                                position: relative;
+                                .dropdown-head {
+                                    padding: 0 12px;
+                                }
+                                .dropdown-body {
+                                    padding: 0 12px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-grow: 1;
+                                    flex-direction: column;
+                                    height: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .items-nav {
+                display: flex;
+                justify-content: flex-end;
+                a {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+
+    a {
+        color: #262626;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 17px 25px;
+        transition: 0.3s ease all;
+        font-size: 18px;
+    }
+}
