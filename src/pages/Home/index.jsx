@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MainMenu } from "./../../components/MainMenu";
+import { MainMenu } from "components/Main/Menu/MainMenu";
 
 const Home = () => {
   return (

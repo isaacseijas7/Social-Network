@@ -1,19 +1,16 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-
+import MainSpinner from "components/Main/Spinner";
 import "normalize.css/normalize.css";
 
 const App = lazy(() => import("./App"));
-const Spinner = () => {
-  return <div>CARGANDO...</div>;
-};
 
-export default Spinner;
+export default MainSpinner;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<MainSpinner />}>
       <div>
         <App />
       </div>

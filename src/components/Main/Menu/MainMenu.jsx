@@ -7,7 +7,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { TiMessages } from "react-icons/ti";
 import { IoNavigateCircleOutline } from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
-import { Searcher } from "./Searcher";
+import { Searcher } from "components/Main/Menu/Searcher";
 
 export const MainMenu = () => {
   return (

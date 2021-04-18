@@ -81,12 +81,18 @@
                     top: 7px;
                     z-index: 2;
                 }
-                .search-icon-close {
+                .search-icon-close,
+                .search-icon-spinner {
                     position: absolute;
                     right: 7px;
                     top: 7px;
                     z-index: 3;
                     cursor: pointer;
+                }
+
+                .search-icon-spinner {
+                    transform: translateZ(0);
+                    animation: loadSpinner 1.1s infinite linear;
                 }
                 .wrapper-dropdown {
                     top: 12px;
@@ -173,5 +179,16 @@
         padding: 17px 25px;
         transition: 0.3s ease all;
         font-size: 18px;
+    }
+}
+
+@keyframes loadSpinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
