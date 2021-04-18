@@ -1,15 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import "./MainMenu.scss";
 
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineHome, AiFillHome } from "react-icons/ai";
 import { FaRegHeart } from "react-icons/fa";
-import { TiMessages } from "react-icons/ti";
-import { IoNavigateCircleOutline } from "react-icons/io5";
+import {
+  IoChatboxSharp,
+  IoChatboxOutline,
+  IoNavigateCircleOutline,
+  IoNavigateCircleSharp,
+} from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
 import { Searcher } from "components/Main/Menu/Searcher";
 
 export const MainMenu = () => {
+  const matchHome = useRouteMatch("/");
+  const matchInbox = useRouteMatch("/direct/inbox");
+  const matchExplore = useRouteMatch("/explore");
+
   return (
     <nav className="nav">
       <div className="contenedor-nav">
@@ -20,13 +28,25 @@ export const MainMenu = () => {
           <Searcher />
           <div className="items-nav">
             <Link to="/">
-              <AiOutlineHome size="30" />
+              {matchHome && matchHome.isExact ? (
+                <AiFillHome size="30" />
+              ) : (
+                <AiOutlineHome size="30" />
+              )}
             </Link>
             <Link to="/direct/inbox">
-              <TiMessages size="30" />
+              {matchInbox && matchInbox.isExact ? (
+                <IoChatboxSharp size="30" />
+              ) : (
+                <IoChatboxOutline size="30" />
+              )}
             </Link>
             <Link to="/explore">
-              <IoNavigateCircleOutline size="30" />
+              {matchExplore && matchExplore.isExact ? (
+                <IoNavigateCircleSharp size="30" />
+              ) : (
+                <IoNavigateCircleOutline size="30" />
+              )}
             </Link>
             <Link to="/">
               <FaRegHeart size="30" />
