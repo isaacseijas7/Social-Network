@@ -21,8 +21,8 @@ export const Searcher = () => {
   const hideInput = () => {
     setSeeInput(false);
     setSearching(false);
-    setSearch("");
     setUsers([]);
+    setSearch("");
   };
 
   const writingSearch = ({ target }) => {
@@ -34,7 +34,6 @@ export const Searcher = () => {
     setUsers(resunts);
     if (target.value.length === 0) {
       setSearching(false);
-      setUsers([]);
     }
   };
 
@@ -46,7 +45,12 @@ export const Searcher = () => {
         value={search}
         autoCapitalize="none"
         placeholder="Buscar"
-        onBlur={hideInput}
+        onBlur={() => {
+          setSearching(false);
+          setTimeout(() => {
+            setSeeInput(false);
+          }, 300);
+        }}
         onChange={writingSearch}
       />
       {!seeInput && (
@@ -58,7 +62,9 @@ export const Searcher = () => {
         >
           <div className="finder-controller">
             <MdSearch className="search-icon" size="14" />
-            <span className="placeholder">Buscar</span>
+            <span className="placeholder">
+              {search.length > 0 ? search.slice(0, 15) : "Buscar"}
+            </span>
           </div>
         </div>
       )}
