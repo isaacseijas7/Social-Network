@@ -5,6 +5,14 @@ import { ImSpinner3 } from "react-icons/im";
 import UserList from "../UserList";
 import { searchInArrayObject } from "utils";
 import dataUsers from "assets/data/users";
+import styled, { keyframes } from "styled-components";
+import { fadeInDown } from "react-animations/lib/fade-in-down";
+
+const fadeInDownAnimation = keyframes`${fadeInDown}`;
+
+const FadeInDownDiv = styled.div`
+  animation: 1s ${fadeInDownAnimation};
+`;
 
 export const Searcher = () => {
   const inputRef = useRef(null);
@@ -34,6 +42,7 @@ export const Searcher = () => {
     setUsers(resunts);
     if (target.value.length === 0) {
       setSearching(false);
+      setUsers([]);
     }
   };
 
@@ -45,12 +54,6 @@ export const Searcher = () => {
         value={search}
         autoCapitalize="none"
         placeholder="Buscar"
-        onBlur={() => {
-          setSearching(false);
-          setTimeout(() => {
-            setSeeInput(false);
-          }, 300);
-        }}
         onChange={writingSearch}
       />
       {!seeInput && (
@@ -85,7 +88,7 @@ export const Searcher = () => {
               size="14"
             />
           )}
-          <div className="wrapper-dropdown">
+          <FadeInDownDiv className="wrapper-dropdown">
             <div className="dropdown">
               <div className="dropdown-arrow" />
               <div className="dropdown-card">
@@ -106,7 +109,14 @@ export const Searcher = () => {
                 </div>
               </div>
             </div>
-          </div>
+            <div
+              className="close-dropdown"
+              onClick={() => {
+                setSearching(false);
+                setSeeInput(false);
+              }}
+            ></div>
+          </FadeInDownDiv>
         </>
       )}
     </div>

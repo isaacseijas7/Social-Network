@@ -1,12 +1,14 @@
 import React from "react";
-
-import { MainMenu } from "components/Main/Menu/MainMenu";
+import { MainLayout } from "layouts/MainLayout";
 
 const Inbox = () => {
   return (
-    <div>
-      <MainMenu />
-    </div>
+    <MainLayout>
+      <div className="contenedor">
+        <br />
+        <h1>Inbox</h1>
+      </div>
+    </MainLayout>
   );
 };
 

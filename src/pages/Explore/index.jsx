@@ -1,12 +1,14 @@
 import React from "react";
-
-import { MainMenu } from "components/Main/Menu/MainMenu";
+import { MainLayout } from "layouts/MainLayout";
 
 const Explore = () => {
   return (
-    <div>
-      <MainMenu />
-    </div>
+    <MainLayout>
+      <div className="contenedor">
+        <br />
+        <h1>Explore</h1>
+      </div>
+    </MainLayout>
   );
 };
 

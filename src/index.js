@@ -11,9 +11,7 @@ export default MainSpinner;
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<MainSpinner />}>
-      <div>
-        <App />
-      </div>
+      <App />
     </Suspense>
   </React.StrictMode>,
   document.getElementById("root")

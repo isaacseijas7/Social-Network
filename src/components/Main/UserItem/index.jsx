@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./UserItem.scss";
+import imagUser from "./../../../assets/img/user.jpg";
 
 const UserItem = ({ user }) => {
   return (
@@ -8,9 +9,9 @@ const UserItem = ({ user }) => {
       <div className="content_user-item">
         <div className="user-item_photo">
           <img
-            src="https://i.pravatar.cc/150?img=57"
+            src={imagUser}
             alt="avatar"
-            srcSet="https://i.pravatar.cc/150?img=57"
+            srcSet={imagUser}
           />
         </div>
         <div className="user-item_details">

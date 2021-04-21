@@ -17,18 +17,15 @@
         &:hover {
             background-color: #fafafa;
         }
-        .user-item_photo {
-            img {
-                width: 44px;
-                border-radius: 50%;
-            }
+        .user-item_photo img {
+            border-radius: 50%;
+            width: 44px;
         }
         .user-item_details {
-            flex: 2;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: start;
+            align-items: flex-start;
+            width: 100%;
             margin-left: 10px;
             .full_name {
                 font-size: 14px;

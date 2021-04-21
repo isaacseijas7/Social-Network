@@ -228,11 +228,14 @@ img {
 	* CONTENEDORES *
 ==================== */
 
+.wrapper-main {
+    padding-top: 50px;
+}
+
 .contenedor {
     max-width: 975px;
     width: var(--ancho-contenedor);
-    margin: 20px auto;
-    overflow: hidden;
+    margin: auto;
 }
 
 .contenedor-ancho {
@@ -243,6 +246,14 @@ img {
 
 .w-100 {
     width: 100%;
+}
+
+.pos_relative{
+    position: relative;
+}
+
+.cursor_pointer {
+    cursor: pointer;
 }
 
 /* ====================
